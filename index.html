@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Made Arya Astawa">
+    <title>Currency Exchange Rates</title>
+    <link rel="shortcut icon"
+        href="https://img.icons8.com/external-soft-fill-juicy-fish/2x/external-currencies-money-soft-fill-soft-fill-juicy-fish.png"
+        type="image/x-icon">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+        * {
+            padding-left: 0;
+        }
+
+        [class~=vertical-center],
+        nav {
+            display: flex;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        * {
+            padding-bottom: 0;
+        }
+
+        * {
+            padding-right: 0;
+        }
+
+        * {
+            padding-top: 0;
+        }
+
+        * {
+            margin-left: 0;
+        }
+
+        [class~=vertical-center] {
+            align-items: center;
+        }
+
+        .nav-image {
+            height: 22.5pt;
+        }
+
+        .nav-image {
+            overflow: hidden;
+        }
+
+        * {
+            margin-bottom: 0;
+        }
+
+        * {
+            margin-right: 0;
+        }
+
+        nav {
+            cursor: default;
+        }
+
+        * {
+            margin-top: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        nav {
+            position: fixed;
+        }
+
+        nav {
+            top: 0;
+        }
+
+        nav {
+            padding-left: .1875in;
+        }
+
+        .nav-image {
+            border-radius: 50%;
+        }
+
+        * {
+            font-family: "Nunito", "Roboto", serif;
+        }
+
+        nav {
+            padding-bottom: 8px;
+        }
+
+        nav h1 {
+            font-size: .166666667in;
+        }
+
+        nav {
+            padding-right: .1875in;
+        }
+
+        nav {
+            padding-top: 8px;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        .nav-image {
+            box-shadow: 0 0 0 .6pt #17a05d;
+        }
+
+        nav {
+            gap: .083333333in;
+        }
+
+        nav {
+            background: white;
+        }
+
+        nav {
+            box-shadow: .225pt .003125in .03125in #505050;
+        }
+
+        .nav-image img {
+            height: 100%;
+        }
+
+        nav h1 {
+            color: #8c8c8c;
+        }
+
+        @media (max-width: 480px) {
+            nav h1 {
+                font-size: .145833333in;
+            }
+
+            [class~=nav-image] {
+                height: 22px;
+            }
+        }
+
+        #header {
+            padding-left: 0;
+        }
+
+        #header {
+            padding-bottom: 70px;
+        }
+
+        #header {
+            padding-right: 0;
+        }
+
+        #header {
+            padding-top: 130px;
+        }
+
+        #header {
+            background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9)), url("https://www.seekpng.com/png/detail/987-9873634_black-lines-wave-red-vertical-line-art.png");
+        }
+
+        #header {
+            border-bottom-width: .0625pc;
+        }
+
+        #header {
+            border-bottom-style: solid;
+        }
+
+        #header {
+            border-bottom-color: #c8c8c8;
+        }
+
+        #header {
+            border-image: none;
+        }
+
+        #header-form {
+            display: block;
+        }
+
+        #header-form {
+            padding-left: 1pc;
+        }
+
+        #header-form {
+            padding-bottom: .75pc;
+        }
+
+        #header-form {
+            padding-right: 1pc;
+        }
+
+        #header-form {
+            padding-top: .75pc;
+        }
+
+        #header-form {
+            margin-left: auto;
+        }
+
+        #header-form {
+            margin-bottom: 0;
+        }
+
+        #header-form {
+            margin-right: auto;
+        }
+
+        #header-form {
+            margin-top: 0;
+        }
+
+        #header-form {
+            width: 40%;
+        }
+
+        #header-form {
+            outline: none;
+        }
+
+        #header-form {
+            border-left-width: medium;
+        }
+
+        #header-form {
+            border-bottom-width: medium;
+        }
+
+        #header-form {
+            border-right-width: medium;
+        }
+
+        #header-form {
+            border-top-width: medium;
+        }
+
+        #header-form {
+            border-left-style: none;
+        }
+
+        #header-form {
+            border-bottom-style: none;
+        }
+
+        #header-form {
+            border-right-style: none;
+        }
+
+        #header-form {
+            border-top-style: none;
+        }
+
+        #header-form {
+            border-left-color: currentColor;
+        }
+
+        #header-form {
+            border-bottom-color: currentColor;
+        }
+
+        #header-form {
+            border-right-color: currentColor;
+        }
+
+        #header-form {
+            border-top-color: currentColor;
+        }
+
+        #header-form {
+            border-image: none;
+        }
+
+        #header-form {
+            border-radius: 20px;
+        }
+
+        #header-form {
+            box-shadow: .3px .003125in 2.25pt .003125in #8c8c8c;
+        }
+
+        #header-form {
+            font-size: .875pc;
+        }
+
+        #header-form {
+            color: #505050;
+        }
+
+        #header-form {
+            letter-spacing: .5px;
+        }
+
+        #header-form {
+            transition: 500ms;
+        }
+
+        #header-form::placeholder {
+            color: #8c8c8c;
+        }
+
+        #header-form:focus {
+            border-radius: .041666667in;
+        }
+
+        @media (max-width: 768px) {
+            #header {
+                padding-left: 0;
+            }
+
+            #header {
+                padding-bottom: .520833333in;
+            }
+
+            #header {
+                padding-right: 0;
+            }
+
+            #header {
+                padding-top: 82.5pt;
+            }
+
+            #header-form {
+                width: 60%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #header {
+                background-size: cover;
+            }
+
+            #header {
+                background-position: bottom;
+            }
+
+            #header-form {
+                width: 80%;
+            }
+
+            #header-form {
+                font-size: .125in;
+            }
+        }
+
+        [class~=form-1] input {
+            outline: none;
+        }
+
+        [class~=exchange-form],
+        [class~=header-text] {
+            margin-left: 0;
+        }
+
+        [class~=header-text] {
+            margin-bottom: 0;
+        }
+
+        #main {
+            padding-left: 0;
+        }
+
+        #main {
+            padding-bottom: 15pt;
+        }
+
+        [class~=exchange-form],
+        [class~=header-text] {
+            margin-right: 0;
+        }
+
+        [class~=header-text] {
+            margin-top: .208333333in;
+        }
+
+        [class~=header-text] {
+            color: #505050;
+        }
+
+        [class~=header-text] {
+            font-size: .145833333in;
+        }
+
+        [class~=header-text] {
+            text-align: center;
+        }
+
+        [class~=exchange-form] {
+            margin-bottom: 16px;
+        }
+
+        #main {
+            padding-right: 0;
+        }
+
+        [class~=exchange-form] {
+            margin-top: 16px;
+        }
+
+        #main {
+            padding-top: 15pt;
+        }
+
+        #main,
+        .form-1,
+        [class~=form-2],
+        [class~=exchange-form] {
+            display: flex;
+        }
+
+        #main,
+        [class~=exchange-form] {
+            justify-content: center;
+        }
+
+        [class~=exchange-form] {
+            gap: .166666667in;
+        }
+
+        [class~=form-1] input {
+            border-left-width: medium;
+        }
+
+        .form-1,
+        [class~=form-2] {
+            padding-left: 15pt;
+        }
+
+        .form-1,
+        [class~=form-2] {
+            padding-bottom: 10px;
+        }
+
+        .form-1,
+        [class~=form-2] {
+            padding-right: 15pt;
+        }
+
+        [class~=form-1] input {
+            border-bottom-width: medium;
+        }
+
+        .form-1,
+        [class~=form-2] {
+            padding-top: 10px;
+        }
+
+        [class~=form-2],
+        .form-1 {
+            max-width: 45%;
+        }
+
+        .form-1,
+        [class~=form-2] {
+            border-radius: .104166667in;
+        }
+
+        [class~=form-1] input {
+            border-right-width: medium;
+        }
+
+        [class~=form-1] input {
+            border-top-width: medium;
+        }
+
+        .form-1 {
+            border-left-width: .75pt;
+        }
+
+        .form-1 {
+            border-bottom-width: .75pt;
+        }
+
+        .form-1,
+        #left-section {
+            border-right-width: .75pt;
+        }
+
+        .form-1 {
+            border-top-width: .75pt;
+        }
+
+        .form-1 {
+            border-left-style: solid;
+        }
+
+        #left-section {
+            width: 60%;
+        }
+
+        .form-1 {
+            border-bottom-style: solid;
+        }
+
+        .form-1,
+        #left-section {
+            border-right-style: solid;
+        }
+
+        .form-1 {
+            border-top-style: solid;
+        }
+
+        [class~=form-1] input {
+            border-left-style: none;
+        }
+
+        [class~=form-1] input {
+            border-bottom-style: none;
+        }
+
+        .form-1 {
+            border-left-color: #c8c8c8;
+        }
+
+        .form-1 {
+            border-bottom-color: #c8c8c8;
+        }
+
+        .form-1,
+        #left-section {
+            border-right-color: #c8c8c8;
+        }
+
+        .form-1 {
+            border-top-color: #c8c8c8;
+        }
+
+        .form-1,
+        #left-section {
+            border-image: none;
+        }
+
+        [class~=form-1] input {
+            border-right-style: none;
+        }
+
+        [class~=form-2] {
+            border-left-width: .75pt;
+        }
+
+        [class~=form-2] {
+            border-bottom-width: .75pt;
+        }
+
+        [class~=form-2] {
+            border-right-width: .75pt;
+        }
+
+        [class~=form-2] {
+            border-top-width: .75pt;
+        }
+
+        [class~=form-2] {
+            border-left-style: solid;
+        }
+
+        [class~=form-2] {
+            border-bottom-style: solid;
+        }
+
+        [class~=form-2] {
+            border-right-style: solid;
+        }
+
+        [class~=form-2] {
+            border-top-style: solid;
+        }
+
+        [class~=form-2] {
+            border-left-color: #c8c8c8;
+        }
+
+        [class~=form-2] {
+            border-bottom-color: #c8c8c8;
+        }
+
+        [class~=form-2] {
+            border-right-color: #c8c8c8;
+        }
+
+        [class~=form-2] {
+            border-top-color: #c8c8c8;
+        }
+
+        [class~=form-2] {
+            border-image: none;
+        }
+
+        [class~=exchange-select],
+        [class~=form-2] input {
+            outline: none;
+        }
+
+        [class~=exchange-select] {
+            border-left-width: medium;
+        }
+
+        [class~=exchange-select] {
+            border-bottom-width: medium;
+        }
+
+        [class~=exchange-select],
+        [class~=form-1] input {
+            border-top-style: none;
+        }
+
+        #right-section {
+            width: 40%;
+        }
+
+        [class~=exchange-select] {
+            border-right-width: medium;
+        }
+
+        [class~=exchange-select],
+        [class~=form-1] input {
+            border-left-color: currentColor;
+        }
+
+        [class~=exchange-select] {
+            border-top-width: medium;
+        }
+
+        [class~=exchange-select] {
+            border-left-style: none;
+        }
+
+        [class~=form-1] input,
+        [class~=exchange-select] {
+            border-bottom-color: currentColor;
+        }
+
+        [class~=exchange-select],
+        [class~=form-1] input {
+            border-right-color: currentColor;
+        }
+
+        #statistik {
+            margin-left: auto;
+        }
+
+        [class~=exchange-select],
+        [class~=form-1] input {
+            border-top-color: currentColor;
+        }
+
+        [class~=exchange-select] {
+            border-bottom-style: none;
+        }
+
+        [class~=exchange-select] {
+            border-right-style: none;
+        }
+
+        [class~=exchange-select],
+        [class~=form-1] input {
+            border-image: none;
+        }
+
+        #statistik {
+            margin-bottom: 0;
+        }
+
+        #statistik {
+            margin-right: auto;
+        }
+
+        [class~=form-1] input,
+        [class~=exchange-select],
+        [class~=form-2] input {
+            font-size: 14px;
+        }
+
+        [class~=form-1] input,
+        [class~=form-2] input,
+        [class~=exchange-select] {
+            color: #505050;
+        }
+
+        [class~=exchange-select] {
+            padding-left: .5pc;
+        }
+
+        #statistik {
+            margin-top: 0;
+        }
+
+        [class~=exchange-select] {
+            padding-bottom: 0;
+        }
+
+        [class~=exchange-select] {
+            padding-right: .5pc;
+        }
+
+        [class~=exchange-select] {
+            padding-top: 0;
+        }
+
+        [class~=exchange-select],
+        [class~=form-1] input,
+        [class~=form-2] input {
+            width: 50%;
+        }
+
+        [class~=exchange-select] {
+            border-left-width: .010416667in;
+        }
+
+        [class~=exchange-select] {
+            border-left-style: solid;
+        }
+
+        [class~=exchange-select] {
+            border-left-color: #c8c8c8;
+        }
+
+        [class~=exchange-select] {
+            border-image: none;
+        }
+
+        #statistik {
+            width: 95%;
+        }
+
+        #statistik {
+            height: auto;
+        }
+
+        [class~=form-2] input {
+            border-left-width: medium;
+        }
+
+        [class~=form-2] input {
+            border-bottom-width: medium;
+        }
+
+        [class~=form-2] input {
+            border-right-width: medium;
+        }
+
+        [class~=form-2] input {
+            border-top-width: medium;
+        }
+
+        [class~=form-2] input {
+            border-left-style: none;
+        }
+
+        [class~=form-2] input {
+            border-bottom-style: none;
+        }
+
+        [class~=form-2] input {
+            border-right-style: none;
+        }
+
+        [class~=form-2] input {
+            border-top-style: none;
+        }
+
+        [class~=form-2] input {
+            border-left-color: currentColor;
+        }
+
+        [class~=form-2] input {
+            border-bottom-color: currentColor;
+        }
+
+        [class~=form-2] input {
+            border-right-color: currentColor;
+        }
+
+        [class~=form-2] input {
+            border-top-color: currentColor;
+        }
+
+        [class~=form-2] input {
+            border-image: none;
+        }
+
+        [class~=form-2] input,
+        [class~=form-1] input {
+            letter-spacing: .010416667in;
+        }
+
+        @media (max-width: 768px) {
+            [class~=header-text] {
+                margin-left: 0;
+            }
+
+            #main {
+                flex-direction: column;
+            }
+
+            #main {
+                gap: 20px;
+            }
+
+            #right-section,
+            #left-section {
+                width: 100%;
+            }
+
+            #left-section {
+                border-right-width: medium;
+            }
+
+            [class~=header-text] {
+                margin-bottom: 0;
+            }
+
+            [class~=header-text] {
+                margin-right: 0;
+            }
+
+            [class~=header-text] {
+                margin-top: 0;
+            }
+
+            #left-section {
+                border-right-style: none;
+            }
+
+            #left-section {
+                border-right-color: currentColor;
+            }
+
+            #left-section {
+                border-image: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            [class~=exchange-form] {
+                margin-left: 0;
+            }
+
+            [class~=exchange-form] {
+                margin-bottom: 16.5pt;
+            }
+
+            [class~=exchange-form] {
+                margin-right: 0;
+            }
+
+            [class~=exchange-form] {
+                margin-top: 16.5pt;
+            }
+
+            [class~=exchange-form] {
+                flex-direction: column;
+            }
+
+            [class~=exchange-form] {
+                gap: .0625in;
+            }
+
+            [class~=form-1],
+            [class~=form-2] {
+                margin-left: auto;
+            }
+
+            [class~=form-2],
+            [class~=form-1] {
+                margin-bottom: 0;
+            }
+
+            [class~=form-1],
+            [class~=form-2] {
+                margin-right: auto;
+            }
+
+            [class~=form-2],
+            [class~=form-1] {
+                margin-top: 0;
+            }
+
+            [class~=form-2],
+            [class~=form-1] {
+                max-width: 85%;
+            }
+        }
+
+        footer {
+            padding-left: 0;
+        }
+
+        footer {
+            padding-bottom: .375pc;
+        }
+
+        footer {
+            padding-right: 0;
+        }
+
+        footer {
+            padding-top: .375pc;
+        }
+
+        footer {
+            background: #0e5533;
+        }
+
+        footer {
+            color: white;
+        }
+
+        footer {
+            font-size: .125in;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        footer a {
+            color: #3cceff;
+        }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type='text/javascript' src='//aliensold.com/96/14/9b/96149b6aaf1607a435627e9fffbcc27c.js'></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="vertical-center">
+                <div class="nav-image"> <img src="https://cdn.cdnlogo.com/logos/g/15/google-finance.svg"
+                        alt="gambar header"> </div>
+            </div>
+            <div class="vertical-center">
+                <h1>Currency Exchange Rates</h1>
+            </div>
+        </nav>
+        <section id="header"> <input type="text" id="header-form" placeholder="Search currencies or others"> </section>
+        <section id="main">
+            <section id="left-section">
+                <center>
+                    <script
+                        type="text/javascript">if (window.innerWidth > 1100) { atOptions = { 'key': 'adcba443a674379820da52fb63f8c089', 'format': 'iframe', 'height': 90, 'width': 728, 'params': {} }; document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://aliensold.com/adcba443a674379820da52fb63f8c089/invoke.js"></scr' + 'ipt>'); }</script>
+                </center>
+                <h1 class="header-text">Currency Exchange Rate Conversion</h1>
+                <div class="exchange-form">
+                    <div class="form-1"> <input type="text" id="exchange-input-1"
+                            onkeypress='return event.charCode >=48 && event.charCode <=57' value="0"> <select
+                            id="exchange-select-1" class="exchange-select"></select> </div>
+                    <div class="form-2"> <input type="text" id="exchange-input-2"
+                            onkeypress='return event.charCode >=48 && event.charCode <=57' value="0"> <select
+                            id="exchange-select-2" class="exchange-select"></select> </div>
+                </div>
+                <div class="exchange-form">
+                    <div class="form-1"> <input type="text" id="exchange-input-3"
+                            onkeypress='return event.charCode >=48 && event.charCode <=57' value="0"> <select
+                            id="exchange-select-3" class="exchange-select"></select> </div>
+                    <div class="form-2"> <input type="text" id="exchange-input-4"
+                            onkeypress='return event.charCode >=48 && event.charCode <=57' value="0"> <select
+                            id="exchange-select-4" class="exchange-select"></select> </div>
+                </div>
+                <div class="exchange-form">
+                    <div class="form-1"> <input type="text" id="exchange-input-5"
+                            onkeypress='return event.charCode >=48 && event.charCode <=57' value="0"> <select
+                            id="exchange-select-5" class="exchange-select"></select> </div>
+                    <div class="form-2"> <input type="text" id="exchange-input-6"
+                            onkeypress='return event.charCode >=48 && event.charCode <=57' value="0"> <select
+                            id="exchange-select-6" class="exchange-select"></select> </div>
+                </div>
+            </section>
+            <section id="right-section">
+                <div id="statistik"></div>
+            </section>
+        </section>
+        <footer>
+            <p>&copy; 2022. <a href="https://www.instagram.com/madearyaastawa" target="_blank">madearyaastawa</a>. All
+                Rights Reserved.</p>
+        </footer>
+    </div>
+    <script>function _0x33f9() { const _0x2a632f = ['451568ZuMGSv', '-01/currencies/usd/idr.json', 'visualization', 'eur', '#exchange-select-6', '#exchange-select-3', 'load', 'catch', '9KHgUDA', 'arrayToDataTable', 'Maret', 'current', 'corechart', '.json', 'push', '#exchange-select-1', '4413365veBVfD', '322619LtCFhP', '#exchange-input-4', 'draw', '56qfeICw', '3732390QLpMrH', 'usd', 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.min.json', '#333', '#exchange-select-5', 'Date', 'idr', 'Agustus', 'forEach', '6hnOYVT', 'Juli', '#exchange-select-4', 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/', 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/2022-', '#exchange-input-1', 'then', 'Mei', 'json', 'Oktober', 'change', '10021490epUCFf', 'November', 'input', '#exchange-input-2', '#exchange-input-5', 'charts', '#exchange-select-2', '</option>', 'Juni', 'EUR', '-01/currencies/eur/idr.json', 'jpy', 'USD', 'Januari', '<option\x20value=\x22', '893668LHAKlu', 'value', 'addEventListener', '134848fOxiNi', 'querySelector', '#statistik']; _0x33f9 = function () { return _0x2a632f; }; return _0x33f9(); } const _0x435eab = _0x30c4; (function (_0x1b99e5, _0x17d636) { const _0x2b7edf = _0x30c4, _0x52c17c = _0x1b99e5(); while (!![]) { try { const _0x556618 = parseInt(_0x2b7edf(0x1ef)) / 0x1 + -parseInt(_0x2b7edf(0x219)) / 0x2 + parseInt(_0x2b7edf(0x1fc)) / 0x3 * (parseInt(_0x2b7edf(0x216)) / 0x4) + -parseInt(_0x2b7edf(0x1ee)) / 0x5 + -parseInt(_0x2b7edf(0x1f3)) / 0x6 + parseInt(_0x2b7edf(0x1f2)) / 0x7 * (parseInt(_0x2b7edf(0x21c)) / 0x8) + -parseInt(_0x2b7edf(0x1e6)) / 0x9 * (-parseInt(_0x2b7edf(0x207)) / 0xa); if (_0x556618 === _0x17d636) break; else _0x52c17c['push'](_0x52c17c['shift']()); } catch (_0x290a0d) { _0x52c17c['push'](_0x52c17c['shift']()); } } }(_0x33f9, 0x9ef00)); const input_1 = document[_0x435eab(0x21a)](_0x435eab(0x201)), input_2 = document[_0x435eab(0x21a)](_0x435eab(0x20a)), select_1 = document[_0x435eab(0x21a)](_0x435eab(0x1ed)), select_2 = document['querySelector'](_0x435eab(0x20d)), input_3 = document[_0x435eab(0x21a)]('#exchange-input-3'), input_4 = document[_0x435eab(0x21a)](_0x435eab(0x1f0)), select_3 = document[_0x435eab(0x21a)](_0x435eab(0x1e3)), select_4 = document[_0x435eab(0x21a)](_0x435eab(0x1fe)), input_5 = document[_0x435eab(0x21a)](_0x435eab(0x20b)), input_6 = document[_0x435eab(0x21a)]('#exchange-input-6'), select_5 = document[_0x435eab(0x21a)](_0x435eab(0x1f7)), select_6 = document['querySelector'](_0x435eab(0x1e2)), select = [select_1, select_2, select_3, select_4, select_5, select_6]; fetch(_0x435eab(0x1f5))['then'](_0x2143f0 => _0x2143f0['json']())[_0x435eab(0x202)](_0x5b91f0 => { const _0x52a3b3 = _0x435eab; let _0x113d6f = ''; Object['values'](_0x5b91f0)[_0x52a3b3(0x1fb)]((_0x4ae033, _0xb7161e) => { const _0xf0121f = _0x52a3b3; _0x113d6f += _0xf0121f(0x215) + Object['keys'](_0x5b91f0)[_0xb7161e] + '\x22>' + _0x4ae033 + _0xf0121f(0x20e); }), select[_0x52a3b3(0x1fb)](_0x5c80bd => _0x5c80bd['innerHTML'] = _0x113d6f); }); let value_1, value_2, value_3, value_4, value_5, value_6; setTimeout(() => { const _0xc494cb = _0x435eab; select_1[_0xc494cb(0x217)] = _0xc494cb(0x1f4), select_2['value'] = 'idr', select_3['value'] = _0xc494cb(0x212), select_4[_0xc494cb(0x217)] = _0xc494cb(0x1f9), select_5[_0xc494cb(0x217)] = _0xc494cb(0x1e1), select_6[_0xc494cb(0x217)] = _0xc494cb(0x1f9), value_1 = select_1[_0xc494cb(0x217)], value_2 = select_2[_0xc494cb(0x217)], value_3 = select_3[_0xc494cb(0x217)], value_4 = select_4['value'], value_5 = select_5[_0xc494cb(0x217)], value_6 = select_6['value']; }, 0x64), select_1[_0x435eab(0x218)](_0x435eab(0x206), function () { const _0x240027 = _0x435eab; value_1 = this[_0x240027(0x217)]; }), select_2[_0x435eab(0x218)](_0x435eab(0x206), function () { value_2 = this['value']; }), select_3[_0x435eab(0x218)]('change', function () { const _0x2ab1a3 = _0x435eab; value_3 = this[_0x2ab1a3(0x217)]; }), select_4[_0x435eab(0x218)](_0x435eab(0x206), function () { const _0x51194f = _0x435eab; value_4 = this[_0x51194f(0x217)]; }), select_5['addEventListener'](_0x435eab(0x206), function () { const _0x58cf1a = _0x435eab; value_5 = this[_0x58cf1a(0x217)]; }), select_6[_0x435eab(0x218)](_0x435eab(0x206), function () { const _0xa984e1 = _0x435eab; value_6 = this[_0xa984e1(0x217)]; }); async function convert(_0x4c781e, _0x48124a, _0x2f4989, _0x18ebfd) { const _0x5881fa = _0x435eab; fetch(_0x5881fa(0x1ff) + _0x4c781e + '/' + _0x48124a + _0x5881fa(0x1eb))[_0x5881fa(0x202)](_0x42d794 => _0x42d794['json']())['then'](_0x1a9430 => _0x2f4989[_0x5881fa(0x217)] = _0x1a9430[_0x48124a] * _0x18ebfd)[_0x5881fa(0x1e5)](_0x1abf13 => _0x1abf13); } function _0x30c4(_0x394da0, _0x1e7275) { const _0x33f9bf = _0x33f9(); return _0x30c4 = function (_0x30c419, _0x5a417b) { _0x30c419 = _0x30c419 - 0x1e0; let _0xf2ea9a = _0x33f9bf[_0x30c419]; return _0xf2ea9a; }, _0x30c4(_0x394da0, _0x1e7275); } input_1['addEventListener'](_0x435eab(0x209), function () { const _0x1c0f98 = _0x435eab; this[_0x1c0f98(0x217)] = this[_0x1c0f98(0x217)] <= 0x0 ? '0' : parseInt(this[_0x1c0f98(0x217)]), convert(value_1, value_2, input_2, this[_0x1c0f98(0x217)]); }), input_2[_0x435eab(0x218)](_0x435eab(0x209), function () { const _0x38a279 = _0x435eab; this[_0x38a279(0x217)] = this[_0x38a279(0x217)] <= 0x0 ? '0' : parseInt(this['value']), convert(value_2, value_1, input_1, this['value']); }), input_3[_0x435eab(0x218)]('input', function () { const _0x2b3584 = _0x435eab; this[_0x2b3584(0x217)] = this[_0x2b3584(0x217)] <= 0x0 ? '0' : parseInt(this[_0x2b3584(0x217)]), convert(value_3, value_4, input_4, this[_0x2b3584(0x217)]); }), input_4['addEventListener'](_0x435eab(0x209), function () { const _0x2e9025 = _0x435eab; this[_0x2e9025(0x217)] = this[_0x2e9025(0x217)] <= 0x0 ? '0' : parseInt(this[_0x2e9025(0x217)]), convert(value_4, value_3, input_3, this[_0x2e9025(0x217)]); }), input_5['addEventListener'](_0x435eab(0x209), function () { const _0x10ce45 = _0x435eab; this[_0x10ce45(0x217)] = this[_0x10ce45(0x217)] <= 0x0 ? '0' : parseInt(this[_0x10ce45(0x217)]), convert(value_5, value_6, input_6, this[_0x10ce45(0x217)]); }), input_6[_0x435eab(0x218)](_0x435eab(0x209), function () { const _0x316247 = _0x435eab; this[_0x316247(0x217)] = this[_0x316247(0x217)] <= 0x0 ? '0' : parseInt(this[_0x316247(0x217)]), convert(value_6, value_5, input_5, this[_0x316247(0x217)]); }); const indonesian_month = [_0x435eab(0x214), 'Februari', _0x435eab(0x1e8), 'April', _0x435eab(0x203), _0x435eab(0x20f), _0x435eab(0x1fd), _0x435eab(0x1fa), 'September', _0x435eab(0x205), _0x435eab(0x208), 'Desember']; google[_0x435eab(0x20c)][_0x435eab(0x1e4)](_0x435eab(0x1e9), { 'packages': [_0x435eab(0x1ea)] }), google[_0x435eab(0x20c)]['setOnLoadCallback'](drawChart); function drawChart() { const _0x358923 = _0x435eab; let _0x55a06b = [[_0x358923(0x1f8), _0x358923(0x213), _0x358923(0x210)]]; for (let _0x413862 = 0x1; _0x413862 <= 0xc; _0x413862++) { fetch(_0x358923(0x200) + (_0x413862 < 0xa ? '0' : '') + _0x413862 + _0x358923(0x21d))['then'](_0x1e89f5 => _0x1e89f5['json']())[_0x358923(0x202)](_0x37ee6f => { const _0x3279e1 = _0x358923; fetch(_0x3279e1(0x200) + (_0x413862 < 0xa ? '0' : '') + _0x413862 + _0x3279e1(0x211))[_0x3279e1(0x202)](_0x5ba858 => _0x5ba858[_0x3279e1(0x204)]())[_0x3279e1(0x202)](_0x4e660b => { const _0x3ef514 = _0x3279e1; _0x55a06b[_0x3ef514(0x1ec)](['1\x20' + indonesian_month[_0x413862 - 0x1] + '\x202022', _0x37ee6f[_0x3ef514(0x1f9)], _0x4e660b[_0x3ef514(0x1f9)]]); })['catch'](_0x3dca78 => _0x3dca78); })['catch'](_0x3d895f => _0x3d895f); } setTimeout(() => { const _0x7f8cc8 = _0x358923; var _0x55caaa = google[_0x7f8cc8(0x1e0)][_0x7f8cc8(0x1e7)](_0x55a06b), _0x2453b7 = { 'title': 'Rupiah\x20exchange\x20rates\x202022', 'hAxis': { 'title': _0x7f8cc8(0x1f8), 'titleTextStyle': { 'color': _0x7f8cc8(0x1f6) } } }, _0x44cc67 = new google[(_0x7f8cc8(0x1e0))]['AreaChart'](document[_0x7f8cc8(0x21a)](_0x7f8cc8(0x21b))); _0x44cc67[_0x7f8cc8(0x1f1)](_0x55caaa, _0x2453b7); }, 0x64); }</script>
+    <script type='text/javascript' src='//aliensold.com/44/9d/4a/449d4a9ce1a9b5ba46ef0ebc537b7b3a.js'></script>
+</body>
+
+</html>
